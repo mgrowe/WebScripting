@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitchell Growe | Profile</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container stack">
+      <h1>Mitchell Growe</h1>
+      <p class="muted">
+        I’m a student learning web development and building clean, accessible pages using semantic HTML.
+      </p>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          
+          <li><a href="./index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Page</a></li>
+          <li><a href="projects.html">Projects Page</a></li>
+          <li><a href="contact.html">Contact Page</a></li>
+
+          
+          <li><a href="#about">About Section</a></li>
+          <li><a href="#skills">Skills Section</a></li>
+          <li><a href="#projects">Projects Section</a></li>
+          <li><a href="#contact">Contact Section</a></li>
+
+          
+          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container stack">
+    <section id="about" aria-labelledby="about-heading" class="card">
+      <h2 id="about-heading">About</h2>
+
+      <figure class="profile-figure">
+        <img
+          src="Anthony.jpg"
+          alt="Headshot of Mitchell Growe smiling"
+          class="profile-img"
+          width="320"
+          height="320"
+          loading="lazy"
+        />
+        <figcaption class="muted">My friend Anthony.</figcaption>
+      </figure>
+
+      <p>
+        My name is Mitchell Growe, I'm a full time Information Security Analyst here a Lake Land. I'm currently studying for my associates in Network Administration though that's just a starting point for my long-term career in Cyber Security.
+      </p>
+      <p>
+        I enjoy working on hands on security tasks such as investigating suspicious activity, analyzing logs, and improving system hardening practices. I'm currently focusing on strengthening my understanding of networking fundamentals as well as my scripting skills to help automate processes. My goal is to continue building both technical depth and practical experiences as I continue my career in Cyber Security.
+      </p>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading" class="card">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-list">
+        <li>HTML (semantic structure)</li>
+        <li>CSS (layout + responsive design)</li>
+        <li>Accessibility basics (labels, alt text, landmarks)</li>
+        <li>Git &amp; GitHub</li>
+        <li>Problem-solving / debugging</li>
+      </ul>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading" class="card">
+      <h2 id="projects-heading">Projects</h2>
+
+      <article class="project">
+        <h3>Project One: Profile Page</h3>
+        <p>
+          A clean profile page using semantic HTML, internal jump links, and a validated contact form.
+        </p>
+        <p>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">View inspiration</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Project Two: Coming Soon</h3>
+        <p>
+          Whatever Project 2 will be
+        </p>
+        <p>
+          <a href="https://github.com/" target="_blank" rel="noopener">View code</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading" class="card">
+      <h2 id="contact-heading">Contact Me</h2>
+
+      <form action="#" method="post" class="stack">
+        <div class="stack">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" autocomplete="name" />
+        </div>
+
+        <div class="stack">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="stack">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required minlength="10" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container stack">
+      <p>&copy; <span id="year"></span> Mitchell Growe</p>
+      <p>
+        <a href="https://www.linkedin.com/in/mitchell-growe" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

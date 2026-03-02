@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitchell Growe | Projects</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container stack">
+      <h1>Projects</h1>
+      <p class="muted">A few things I’ve built or plan to build.</p>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html" aria-current="page">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack">
+    <section class="card">
+      <h2>Portfolio</h2>
+
+      <article class="project">
+        <h3>Project One</h3>
+        <p>Description of the project and what you learned.</p>
+        <p><a href="https://github.com/" target="_blank" rel="noopener">Source code</a></p>
+      </article>
+
+      <article class="project">
+        <h3>Project Two</h3>
+        <p>Description of the project and what you learned.</p>
+        <p><a href="https://github.com/" target="_blank" rel="noopener">Source code</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container stack">
+      <p>&copy; <span id="year"></span> Mitchell Growe</p>
+      <p><a href="https://www.linkedin.com/in/mitchell-growe" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

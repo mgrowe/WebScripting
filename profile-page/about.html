@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitchell Growe | About</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container stack">
+      <h1>About</h1>
+      <p class="muted">More details about me and what I’m building.</p>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" aria-current="page">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack">
+    <section class="card">
+      <h2>Background</h2>
+      <p>I was born and raised in Oak Lawn, IL. I moved to Neoga, IL in 2022 with some of my family. I self studied for my Comptia Security+ exam in the summer of 2023 and started my education for my associates in the spring semester of 2023/2024. I then started a 3 month long internship in the ISS department at Lake Land and applied for the full time Information Security Analyst position. I am on my last semester of my associates degree and plan on continuing my education and getting a Bachelors in Cyber Security.</p>
+    </section>
+
+    <section class="card">
+      <h2>Embed</h2>
+      <p class="muted">This video is one I referenced a lot while creating my web pages.</p>
+
+      <div class="embed">
+        <iframe
+          title="YouTube video about web development"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container stack">
+      <p>&copy; <span id="year"></span> Mitchell Growe</p>
+      <p><a href="https://impaulhewitt.com/" target="_blank" rel="noopener">Favorite Website</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

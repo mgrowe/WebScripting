@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitchell Growe | Contact</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container stack">
+      <h1>Contact</h1>
+      <p class="muted">Send me a message.</p>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack">
+    <section class="card stack">
+      <h2>Contact Form</h2>
+
+      <form action="#" method="post" class="stack">
+
+        <div class="stack">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+        </div>
+
+        <div class="stack">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="stack">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="general">General</option>
+            <option value="school">School</option>
+            <option value="project">Project</option>
+          </select>
+        </div>
+
+        <!-- Fixed Radio Section -->
+        <fieldset class="stack">
+          <legend>Preferred contact method</legend>
+
+          <div class="radio-group">
+            <label class="radio-option">
+              <input
+                type="radio"
+                id="pref-email"
+                name="preferred"
+                value="email"
+                required
+              />
+              Email
+            </label>
+
+            <label class="radio-option">
+              <input
+                type="radio"
+                id="pref-phone"
+                name="preferred"
+                value="phone"
+              />
+              Phone
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="stack">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required minlength="10" rows="6"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container stack">
+      <p>&copy; <span id="year"></span> Mitchell Growe</p>
+      <p>
+        <a href="https://impaulhewitt.com/" target="_blank" rel="noopener">
+          Please Click this Link
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

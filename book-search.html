@@ -1,1 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Search | Open Library API</title>
+  <link rel="stylesheet" href="styles/book-search.css" />
+  <script src="book-search.js" defer></script>
+</head>
 
+<body>
+  <header class="site-header">
+    <div class="container stack">
+      <h1>Book Search</h1>
+      <p class="muted">Search the Open Library collection by title, author, or keyword.</p>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./book-search.html" aria-current="page">Book Search</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack">
+    <section class="card stack" aria-labelledby="search-heading">
+      <h2 id="search-heading">Find a Book</h2>
+
+      <form id="search-form" class="search-form">
+        <label for="search-input">Search term</label>
+        <div class="search-row">
+          <input
+            id="search-input"
+            name="search"
+            type="search"
+            placeholder="Example: The Hobbit"
+            autocomplete="off"
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="results-section stack" aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mitchell Growe</p>
+    </div>
+  </footer>
+</body>
+</html>

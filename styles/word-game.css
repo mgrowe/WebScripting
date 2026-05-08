@@ -95,7 +95,7 @@ button {
 
 .game-layout {
   display: grid;
-  grid-template-columns: minmax(18rem, 1fr) minmax(18rem, 24rem);
+  grid-template-columns: minmax(18rem, 1fr) minmax(28rem, 34rem);
   gap: var(--space-2);
   align-items: start;
   padding-top: var(--space-3);
@@ -213,6 +213,9 @@ button {
 
 .keyboard {
   display: grid;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
   gap: 0.45rem;
 }
 
@@ -220,12 +223,15 @@ button {
   display: flex;
   justify-content: center;
   gap: 0.35rem;
+  width: 100%;
 }
 
 .key {
-  min-width: 2rem;
+  flex: 1 1 0;
+  max-width: 2.25rem;
+  min-width: 0;
   min-height: 2.75rem;
-  padding: 0 0.55rem;
+  padding: 0 0.35rem;
   border: 1px solid #94a3b8;
   border-radius: 0.35rem;
   background: #cbd5e1;
@@ -239,7 +245,8 @@ button {
 }
 
 .key.wide {
-  min-width: 4.5rem;
+  flex-grow: 2.1;
+  max-width: 5rem;
   font-size: 0.85rem;
 }
 
@@ -288,11 +295,11 @@ button {
   }
 
   .key {
-    min-width: 1.7rem;
+    min-height: 2.4rem;
     padding: 0 0.35rem;
   }
 
   .key.wide {
-    min-width: 3.7rem;
+    font-size: 0.75rem;
   }
 }

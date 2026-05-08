@@ -1,1 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Guess Game</title>
+  <link rel="stylesheet" href="styles/word-game.css" />
+  <script src="word-game.js" defer></script>
+</head>
 
+<body>
+  <header class="site-header">
+    <div class="container stack">
+      <h1>Word Guess Game</h1>
+      <p class="muted">Guess the hidden 5-letter word in 6 tries.</p>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./word-game.html" aria-current="page">Word Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container game-layout">
+    <section class="game-panel stack" aria-labelledby="game-heading">
+      <div class="title-row">
+        <h2 id="game-heading">Project 2</h2>
+        <button id="restart-button" type="button">Restart</button>
+      </div>
+
+      <p id="message" class="message" role="status" aria-live="polite">
+        Type letters or use the keyboard below.
+      </p>
+
+      <div id="guess-grid" class="guess-grid" aria-label="Guess grid"></div>
+
+      <div class="legend" aria-label="Color guide">
+        <span><span class="legend-box correct"></span>Correct spot</span>
+        <span><span class="legend-box present"></span>Wrong spot</span>
+        <span><span class="legend-box absent"></span>Not in word</span>
+      </div>
+    </section>
+
+    <section class="keyboard-panel stack" aria-labelledby="keyboard-heading">
+      <h2 id="keyboard-heading">Keyboard</h2>
+      <div id="keyboard" class="keyboard" aria-label="On-screen keyboard"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mitchell Growe</p>
+    </div>
+  </footer>
+</body>
+</html>

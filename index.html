@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mitchell Growe | Profile</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <script src="site.js" defer></script>
 </head>
 
 <body>
@@ -12,7 +13,10 @@
 
   <header class="site-header">
     <div class="container stack">
-      <h1>Mitchell Growe</h1>
+      <div class="header-top">
+        <h1>Mitchell Growe</h1>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark Mode</button>
+      </div>
       <p class="muted">
         I’m a student learning web development and building clean, accessible pages using semantic HTML.
       </p>
@@ -23,6 +27,7 @@
           <li><a href="./index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About Page</a></li>
           <li><a href="projects.html">Projects Page</a></li>
+          <li><a href="advanced-product.html">Advanced Product Landing Page</a></li>
           <li><a href="contact.html">Contact Page</a></li>
 
           
@@ -130,8 +135,5 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

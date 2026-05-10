@@ -38,3 +38,37 @@ The page includes a responsive navigation bar, hero section, feature cards, pric
 ### Mobile View
 
 ![Mobile screenshot](images/advanced-product-mobile.png)
+
+
+---
+
+# To-Do List App
+
+## Description
+
+This project is a to-do list application that allows users to add, complete, delete, tag, and filter tasks. The app uses JavaScript and localStorage so tasks remain saved after the page is refreshed or reopened.
+
+## Project Links
+
+- GitHub Repository: https://github.com/mgrowe/WebScripting
+- Live GitHub Pages Site: https://mgrowe.github.io/WebScripting/todo-app.html
+
+## Features
+
+- [x] Add a task with a required task name
+- [x] Add an optional tag for each task
+- [x] Display tasks in a list
+- [x] Mark tasks as complete
+- [x] Delete tasks
+- [x] Filter tasks by All, Active, and Completed
+- [x] Filter tasks by tag
+- [x] Save tasks using localStorage
+- [x] Reload saved tasks when the page opens
+- [x] Show an error message for blank task names
+- [x] Clear the form after adding a task
+- [x] Show an active task counter
+- [x] Includes dark mode support
+
+## Screenshot
+
+![To-Do List App screenshot](images/todo-app-screenshot.png)

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard: Email Threat Analyzer</title>
+  <link rel="stylesheet" href="final-project.css">
+  <script src="final-project.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary navigation">
+      <a class="brand" href="#top">PhishGuard</a>
+      <div class="nav-links">
+        <a href="#analyzer">Analyzer</a>
+        <a href="#training">Training</a>
+        <a href="#history">History</a>
+        <a href="#about">About</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark Mode</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top" class="hero section-shell">
+      <div>
+        <p class="eyebrow">Defensive cybersecurity training</p>
+        <h1>PhishGuard: Email Threat Analyzer</h1>
+        <p class="hero-text">
+          Analyze suspicious emails for common phishing red flags, review a risk score,
+          practice with fictional training samples, and save your review history.
+        </p>
+      </div>
+      <div class="hero-panel" aria-label="Phishing defense checklist">
+        <span>Check sender</span>
+        <span>Review links</span>
+        <span>Spot urgency</span>
+        <span>Verify requests</span>
+      </div>
+    </section>
+
+    <section id="analyzer" class="section-shell app-grid" aria-label="Email analyzer and results">
+      <article class="card analyzer-card">
+        <div class="section-heading">
+          <p class="eyebrow">Analyzer</p>
+          <h2>Inspect an Email</h2>
+        </div>
+
+        <form id="analyzer-form" class="analyzer-form" novalidate>
+          <div class="form-field">
+            <label for="sender-email">Sender email</label>
+            <input id="sender-email" name="sender-email" type="email" placeholder="alerts@example.com">
+          </div>
+
+          <div class="form-field">
+            <label for="email-subject">Subject</label>
+            <input id="email-subject" name="email-subject" type="text" placeholder="Action needed on your account">
+          </div>
+
+          <div class="form-field">
+            <label for="email-body">Email body</label>
+            <textarea id="email-body" name="email-body" rows="8" placeholder="Paste the message text here"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="link-url">Optional link URL</label>
+            <input id="link-url" name="link-url" type="url" placeholder="https://example.com/review">
+          </div>
+
+          <p id="validation-message" class="validation-message" aria-live="polite"></p>
+          <button class="primary-button" type="submit">Analyze Email</button>
+        </form>
+      </article>
+
+      <article class="card result-card" aria-labelledby="result-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Result</p>
+          <h2 id="result-heading">Risk Score</h2>
+        </div>
+
+        <div id="score-meter" class="score-meter low-risk">
+          <span id="score-value">0</span>
+          <span>out of 100</span>
+        </div>
+        <h3 id="risk-level">No Analysis Yet</h3>
+        <p id="risk-explanation" class="muted">
+          Enter an email and run the analyzer to see risk details.
+        </p>
+
+        <div>
+          <h3>Detected Red Flags</h3>
+          <div id="red-flags" class="red-flag-list">
+            <p class="empty-state">No red flags to show yet.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="training" class="section-shell two-column">
+      <article class="card training-card" aria-labelledby="training-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Training Mode</p>
+          <h2 id="training-heading">Practice Spotting Phishing</h2>
+        </div>
+
+        <div class="training-sample">
+          <div class="sample-topline">
+            <span>Practice Sample</span>
+          </div>
+          <p><strong>From:</strong> <span id="sample-sender"></span></p>
+          <p><strong>Subject:</strong> <span id="sample-subject"></span></p>
+          <p id="sample-body"></p>
+        </div>
+
+        <div class="training-actions" role="group" aria-label="Training answer choices">
+          <button class="secondary-button" type="button" data-answer="legitimate">Legitimate</button>
+          <button class="secondary-button" type="button" data-answer="phishing">Phishing</button>
+          <button id="next-sample" class="primary-button" type="button">Next Sample</button>
+          <button id="reset-training" class="secondary-button" type="button">Reset Training Score</button>
+        </div>
+
+        <div id="training-feedback" class="feedback-panel" aria-live="polite"></div>
+        <p id="training-score" class="muted">Score: 0 correct out of 0</p>
+      </article>
+
+      <article id="about" class="card education-card" aria-labelledby="education-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-heading">Defensive Review Tips</h2>
+        </div>
+        <ul class="tip-list">
+          <li>Pause before responding to urgent requests.</li>
+          <li>Check whether the sender address matches the claimed organization.</li>
+          <li>Hover over links or inspect the URL before opening them.</li>
+          <li>Verify account or payment requests through a trusted channel.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="history" class="section-shell card history-card" aria-labelledby="history-heading">
+      <div class="history-top">
+        <div class="section-heading">
+          <p class="eyebrow">History</p>
+          <h2 id="history-heading">Saved Analyses</h2>
+        </div>
+        <button id="clear-history" class="danger-button" type="button">Clear History</button>
+      </div>
+
+      <div class="history-filters" role="group" aria-label="History filters">
+        <button class="history-filter active-filter" type="button" data-risk="all">All</button>
+        <button class="history-filter" type="button" data-risk="low">Low</button>
+        <button class="history-filter" type="button" data-risk="medium">Medium</button>
+        <button class="history-filter" type="button" data-risk="high">High</button>
+      </div>
+
+      <div id="history-list" class="history-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>PhishGuard is an educational defensive tool. Always verify suspicious messages through trusted channels.</p>
+  </footer>
+</body>
+</html>
